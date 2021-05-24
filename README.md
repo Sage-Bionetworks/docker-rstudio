@@ -198,7 +198,7 @@ HTML notebook that will be saved to the same directory with the extension
 docker run --rm \
     --env-file .env \
     -v $(pwd)/notebooks:/data \
-    sagebionetworks/rstudio:4.0.5 \
+    sagebionetworks/rstudio:4.1.0 \
     render /data/examples/*.Rmd
 ```
 

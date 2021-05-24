@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.0.5",
+    "Version": "4.1.0",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -11,16 +11,16 @@
   "Packages": {
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-53.1",
+      "Version": "7.3-54",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "4ef21dd0348b9abb7f8bd1d77e4cd0c3"
+      "Repository": "RSPM",
+      "Hash": "0e59129db205112e3963904db67fd0dc"
     },
     "Matrix": {
       "Package": "Matrix",
       "Version": "1.3-3",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Hash": "df57c82e79600601287edfdcef92c2d6"
     },
     "R6": {
@@ -195,7 +195,7 @@
       "Package": "lattice",
       "Version": "0.20-44",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Hash": "f36bf1a849d9106dc2af72e501f9de41"
     },
     "lifecycle": {
@@ -221,10 +221,10 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.8-34",
+      "Version": "1.8-35",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "bd4a6c4b600f58651d60d381b0e9a397"
+      "Repository": "RSPM",
+      "Hash": "89fd8b2ad4a6cb4979b78cf2a77ab503"
     },
     "mime": {
       "Package": "mime",
