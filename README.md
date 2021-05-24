@@ -1,9 +1,9 @@
 # RStudio
 
-[![GitHub Release](https://img.shields.io/github/release/tschaffter/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/tschaffter/rstudio/releases)
-[![GitHub CI](https://img.shields.io/github/workflow/status/tschaffter/rstudio/CI.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/tschaffter/rstudio)
-[![GitHub License](https://img.shields.io/github/license/tschaffter/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/tschaffter/rstudio/blob/main/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tschaffter/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/tschaffter/rstudio)
+[![GitHub Release](https://img.shields.io/github/release/Sage-Bionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/rstudio/releases)
+[![GitHub CI](https://img.shields.io/github/workflow/status/Sage-Bionetworks/rstudio/CI.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/rstudio)
+[![GitHub License](https://img.shields.io/github/license/Sage-Bionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/rstudio/blob/main/LICENSE)
+[![Docker Pulls](https://img.shields.io/docker/pulls/sagebionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/sagebionetworks/rstudio)
 
 Docker image for analyses using RStudio and Python-Conda
 
@@ -15,8 +15,8 @@ use so that anyone can deploy it again and reproduce your results - even you six
 months from now!
 
 This project provides a portable development environment that enables you to use
-R and Python together. The Docker image [tschaffter/rstudio] offered by this
-project is based on the image [rocker/rstudio].
+R and Python together. The Docker image [sagebionetworks/rstudio] offered by
+this project is based on the image [rocker/rstudio].
 
 Features:
 
@@ -28,7 +28,7 @@ Features:
 - Render Rmd notebook to HTML using the Docker image provided in this project,
   e.g. to generate HTML notebooks in GitHub workflows before publishing them to
   GitHub Pages.
-- Benefit from regular updates of the image [tschaffter/rstudio] which will
+- Benefit from regular updates of the image [sagebionetworks/rstudio] which will
   bring the latest versions of R/RStudio and other dependencies (Miniconda, R
   and Python packages).
 - You only need the Docker Engine on your system to develop code in R and Python
@@ -58,10 +58,10 @@ by the [CI/CD workflow of this repository](.github/workflows/ci.yml).
 
 Rmd Notebook | Description | HTML Notebook
 -------- | ----------- | -------------
-[notebook.Rmd](notebooks/examples/notebook.Rmd)         | Default RStudio notebook.                                | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://tschaffter.github.io/rstudio/latest/notebooks/notebook.html)
-[r-and-python.Rmd](notebooks/examples/r-and-python.Rmd) | Shows how to use R and Python together.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://tschaffter.github.io/rstudio/latest/notebooks/r-and-python.html)
-[sagethemes.Rmd](notebooks/examples/sagethemes.Rmd)     | Example notebook provided by the R library [sagethemes]. | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://tschaffter.github.io/rstudio/latest/notebooks/sagethemes.html)
-[synapse.Rmd](notebooks/examples/synapse.Rmd)           | Shows how to interact with Synapse API.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://tschaffter.github.io/rstudio/latest/notebooks/synapse.html)
+[notebook.Rmd](notebooks/examples/notebook.Rmd)         | Default RStudio notebook.                                | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/notebook.html)
+[r-and-python.Rmd](notebooks/examples/r-and-python.Rmd) | Shows how to use R and Python together.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/r-and-python.html)
+[sagethemes.Rmd](notebooks/examples/sagethemes.Rmd)     | Example notebook provided by the R library [sagethemes]. | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/sagethemes.html)
+[synapse.Rmd](notebooks/examples/synapse.Rmd)           | Shows how to interact with Synapse API.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/synapse.html)
 
 > Important: Please make sure when you write your own notebooks that no
 > sensitive information ends up being publicly available. Please check with the
@@ -87,8 +87,9 @@ in detached mode, you will only need to enter `docker compose down`.
 
 ## How to use this repository
 
-You can use the image [tschaffter/rstudio] as-is to start an instance of RStudio
-and develop tools that interact with Sage Bionetworks services, e.g. Synapse.
+You can use the image [sagebionetworkss/rstudio] as-is to start an instance of
+RStudio and develop tools that interact with Sage Bionetworks services, e.g.
+Synapse.
 
 If you want to create a portable development environment, start by creating a
 new GitHub repository from [this template]. You can then customize your
@@ -98,8 +99,8 @@ the Docker repository where the image should be pushed (see Section
 [Versioning](#Versioning)).
 
 Example projects that use this repository / image:
-  - [Sage-Bionetworks/rstudio]
-  - [Sage-Bionetworks-Challenges/challenge-analysis]
+
+- [Sage-Bionetworks-Challenges/challenge-analysis] (work in progress)
 
 ## Manage R and Python dependencies
 
@@ -197,7 +198,7 @@ HTML notebook that will be saved to the same directory with the extension
 docker run --rm \
     --env-file .env \
     -v $(pwd)/notebooks:/data \
-    tschaffter/rstudio:4.0.5 \
+    sagebionetworks/rstudio:4.0.5 \
     render /data/examples/*.Rmd
 ```
 
@@ -212,8 +213,8 @@ always point to the same git commit once it has been created.
 ### Docker tags
 
 The artifact published by this repository is the Docker image
-[tschaffter/rstudio]. The versions of the image are aligned with the versions of
-R/RStudio, not the GitHub tags of this repository.
+[sagebionetworks/rstudio]. The versions of the image are aligned with the
+versions of R/RStudio, not the GitHub tags of this repository.
 
 The table below describes the image tags available.
 
@@ -240,17 +241,6 @@ Thinking about contributing to this project? Get started by reading our
 
 [Apache License 2.0]
 
-<!--
-Similarly, run this command to convert the notebook to PDF.
-
-    docker run --rm \
-        -v $(pwd)/notebooks:/data \
-        -e RENDER_INPUT="/data/example.Rmd" \
-        -e RENDER_OUTPUT_FORMAT="pdf_document" \
-        tschaffter/rstudio \
-        render
- -->
-
 <!-- Links -->
 
 [rocker/rstudio]: https://hub.docker.com/r/rocker/rstudio
@@ -261,10 +251,10 @@ Similarly, run this command to convert the notebook to PDF.
 [GitHub Dependabot]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-and-disabling-version-updates
 [semantic versioning]: https://semver.org/
 [rocker/rstudio]: https://hub.docker.com/r/rocker/rstudio
-[Apache License 2.0]: https://github.com/tschaffter/rstudio/blob/main/LICENSE
+[Apache License 2.0]: https://github.com/Sage-Bionetworks/rstudio/blob/main/LICENSE
 [Sage Bionetworks]: https://sagebionetworks.org
 [reticulate]: https://rstudio.github.io/reticulate
-[tschaffter/rstudio]: https://hub.docker.com/repository/docker/tschaffter/rstudio
+[sagebionetworks/rstudio]: https://hub.docker.com/repository/docker/sagebionetworks/rstudio
 [sagethemes]: https://github.com/Sage-Bionetworks/sagethemes
 [challengeutils]: https://github.com/Sage-Bionetworks/challengeutils
 [synapseclient]: https://github.com/Sage-Bionetworks/synapsePythonClient
