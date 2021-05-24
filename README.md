@@ -87,7 +87,7 @@ in detached mode, you will only need to enter `docker compose down`.
 
 ## How to use this repository
 
-You can use the image [sagebionetworkss/rstudio] as-is to start an instance of
+You can use the image [sagebionetworks/rstudio] as-is to start an instance of
 RStudio and develop tools that interact with Sage Bionetworks services, e.g.
 Synapse.
 
