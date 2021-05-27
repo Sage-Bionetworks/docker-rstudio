@@ -111,8 +111,8 @@ In RStudio, use the following options to add and update libraries:
 - `Tools` > `Install Packages...`
 - `Tools` > `Check for Package Updates...`
 
-Run the command `renv::snapshot()` to update the file `renv.lock`, which is used
-in `Dockerfile` to install the required R libraries.
+Run the command `renv::snapshot(type="all")` to update the file `renv.lock`,
+which is used in `Dockerfile` to install the required R libraries.
 
 ### Python
 
