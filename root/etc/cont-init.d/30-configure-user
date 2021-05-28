@@ -33,6 +33,12 @@ if [[ ! -z ${SYNAPSE_TOKEN} ]]; then
     fi
 fi
 
+# Create .Renviron
+> /home/${USER}/.Renviron
+for var in "${!APP_@}"; do
+    echo "$var=${!var}" >> /home/${USER}/.Renviron
+done
+
 # Fix sudo: setrlimit(RLIMIT_CORE): Operation not permitted
 # https://github.com/sudo-project/sudo/issues/42#issuecomment-659253293
 echo "Set disable_coredump false" >> /etc/sudo.conf

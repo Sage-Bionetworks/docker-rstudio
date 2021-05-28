@@ -102,6 +102,23 @@ Example projects that use this repository / image:
 
 - [Sage-Bionetworks-Challenges/challenge-analysis] (work in progress)
 
+## Configuration
+
+The configuration of the development environment is defined in the file `.env`.
+This file contains environment variables that are set when the environment
+starts.
+
+For security reason, a user session in RStudio does not see all the environment
+variables of the system. However, the variables defined in `.env` with a name
+that starts with `APP_` will be made visible to the user session via the
+creation of the file `.Renviron`.
+
+```r
+> variables <- names(s <- Sys.getenv())
+> variables[startsWith(variables, "APP_")]
+[1] "APP_BAR" "APP_FOO"
+```
+
 ## Manage R and Python dependencies
 
 ### R
