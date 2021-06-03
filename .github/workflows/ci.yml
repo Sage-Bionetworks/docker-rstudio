@@ -14,7 +14,7 @@ on:
 env:
   docker_repository: sagebionetworks/rstudio
   # github.event.repository.clone_url not available for on: schedule
-  clone_url: https://github.com/Sage-Bionetworks/rstudio.git
+  clone_url: https://github.com/Sage-Bionetworks/docker-rstudio.git
   # github.event.repository.default_branch not available for on: schedule
   default_branch: main
 
