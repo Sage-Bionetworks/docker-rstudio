@@ -1,8 +1,8 @@
 # RStudio
 
-[![GitHub Release](https://img.shields.io/github/release/Sage-Bionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/rstudio/releases)
-[![GitHub CI](https://img.shields.io/github/workflow/status/Sage-Bionetworks/rstudio/CI.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/rstudio)
-[![GitHub License](https://img.shields.io/github/license/Sage-Bionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/rstudio/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/release/Sage-Bionetworks/docker-rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio/releases)
+[![GitHub CI](https://img.shields.io/github/workflow/status/Sage-Bionetworks/docker-rstudio/CI.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio)
+[![GitHub License](https://img.shields.io/github/license/Sage-Bionetworks/docker-rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio/blob/main/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/sagebionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/sagebionetworks/rstudio)
 
 Docker image for analyses using RStudio and Python-Conda
@@ -268,7 +268,7 @@ Thinking about contributing to this project? Get started by reading our
 [GitHub Dependabot]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-and-disabling-version-updates
 [semantic versioning]: https://semver.org/
 [rocker/rstudio]: https://hub.docker.com/r/rocker/rstudio
-[Apache License 2.0]: https://github.com/Sage-Bionetworks/rstudio/blob/main/LICENSE
+[Apache License 2.0]: https://github.com/Sage-Bionetworks/docker-rstudio/blob/main/LICENSE
 [Sage Bionetworks]: https://sagebionetworks.org
 [reticulate]: https://rstudio.github.io/reticulate
 [sagebionetworks/rstudio]: https://hub.docker.com/repository/docker/sagebionetworks/rstudio
@@ -281,6 +281,6 @@ Thinking about contributing to this project? Get started by reading our
 [this template]: https://github.com/nlpsandbox/nlpsandbox.io/generate
 [.github/workflows/ci.yml]: .github/workflows/ci.yml
 [Sage-Bionetworks-Challenges/challenge-analysis]: https://github.com/Sage-Bionetworks-Challenges/challenge-analysis
-[Sage-Bionetworks/rstudio]: https://github.com/Sage-Bionetworks/rstudio
+[Sage-Bionetworks/docker-rstudio]: https://github.com/Sage-Bionetworks/docker-rstudio
 [Docker Engine]: https://docs.docker.com/engine/install/
 [Docker Compose]: https://docs.docker.com/compose/install/
