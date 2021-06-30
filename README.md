@@ -78,6 +78,9 @@ Rmd Notebook | Description | HTML Notebook
 
        docker compose up
 
+> If the command `docker compose` is not available for your system, [install
+> docker-compose] and use the command `docker-compose`.
+
 RStudio is now available at http://localhost. On the login page, enter the
 default username (`rstudio`) and the password specified in `.env`.
 
@@ -279,4 +282,4 @@ Thinking about contributing to this project? Get started by reading our
 [Sage-Bionetworks-Challenges/challenge-analysis]: https://github.com/Sage-Bionetworks-Challenges/challenge-analysis
 [Sage-Bionetworks/docker-rstudio]: https://github.com/Sage-Bionetworks/docker-rstudio
 [Docker Engine]: https://docs.docker.com/engine/install/
-[Docker Compose]: https://docs.docker.com/compose/install/
+[install docker-compose]: https://docs.docker.com/compose/install/
