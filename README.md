@@ -56,10 +56,10 @@ by the [CI/CD workflow of this repository](.github/workflows/ci.yml).
 
 Rmd Notebook | Description | HTML Notebook
 -------- | ----------- | -------------
-[notebook.Rmd](notebooks/examples/notebook.Rmd)         | Default RStudio notebook.                                | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/notebook.html)
-[r-and-python.Rmd](notebooks/examples/r-and-python.Rmd) | Shows how to use R and Python together.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/r-and-python.html)
-[sagethemes.Rmd](notebooks/examples/sagethemes.Rmd)     | Example notebook provided by the R library [sagethemes]. | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/sagethemes.html)
-[synapse.Rmd](notebooks/examples/synapse.Rmd)           | Shows how to interact with Synapse API.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/synapse.html)
+[notebook.Rmd](notebooks/notebook.Rmd)         | Default RStudio notebook.                                | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/notebook.html)
+[r-and-python.Rmd](notebooks/r-and-python.Rmd) | Shows how to use R and Python together.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/r-and-python.html)
+[sagethemes.Rmd](notebooks/sagethemes.Rmd)     | Example notebook provided by the R library [sagethemes]. | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/sagethemes.html)
+[synapse.Rmd](notebooks/synapse.Rmd)           | Shows how to interact with Synapse API.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/synapse.html)
 
 > Important: Please make sure when you write your own notebooks that no
 > sensitive information ends up being publicly available. Please check with the
@@ -212,9 +212,9 @@ HTML notebook that will be saved to the same directory with the extension
 ```console
 docker run --rm \
     --env-file .env \
-    -v $(pwd)/notebooks:/data \
+    -v $(pwd):/project \
     sagebionetworks/rstudio:4.1.0 \
-    render /data/examples/*.Rmd
+    render /project/notebooks/*.Rmd
 ```
 
 ## Versioning
