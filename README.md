@@ -68,12 +68,13 @@ Rmd Notebook | Description | HTML Notebook
 
 ## Usage
 
-1. Create and edit the configuration file. You can initially start RStudio using
+1. Clone this GitHub repository.
+2. Create and edit the configuration file. You can initially start RStudio using
    this configuration as-is.
 
        cp .env.example .env
 
-2. Start RStudio. Add the option `-d` or `--detach` to run in the background.
+3. Start RStudio. Add the option `-d` or `--detach` to run in the background.
 
        docker compose up
 
