@@ -235,15 +235,12 @@ versions of R/RStudio, not the GitHub tags of this repository.
 
 The table below describes the image tags available.
 
-| Tag name                        | Moving | Description
-|---------------------------------|--------|------------
-| `latest`                        | Yes    | Latest stable release.
-| `edge`                          | Yes    | Lastest commit made to the default branch.
-| `weekly`                        | Yes    | Weekly release from the default branch.
-| `<major>`                       | Yes    | Latest stable major release of R/RStudio.
-| `<major>.<minor>`               | Yes    | Latest stable minor release of R/RStudio.
-| `<major>.<minor>.<patch>`       | Yes    | Latest stable patch release of R/RStudio.
-| `<major>.<minor>.<patch>-<sha>` | No     | Same as above but with the reference to the git commit.
+| Tag name                        | Description                                            | Moving
+|---------------------------------|--------------------------------------------------------|-------
+| `latest`                        | Latest stable release.                                 | Yes
+| `edge`                          | Lastest commit made to the default branch.             | Yes
+| `edge-<sha>`                    | Same as above with the reference to the git commit.    | No
+| `<major>.<minor>.<patch>`       | Latest stable patch release `<major>.<minor>.<patch>`. | No
 
 You should avoid using a moving tag like `latest` when deploying containers in
 production, because this makes it hard to track which version of the image is
