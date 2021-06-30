@@ -227,11 +227,11 @@ This repository uses [semantic versioning] to track the releases of this
 project. This repository uses "non-moving" GitHub tags, that is, a tag will
 always point to the same git commit once it has been created.
 
-### Docker tags
+### Docker and GitHub Pages tags
 
-The artifact published by this repository is the Docker image
-[sagebionetworks/rstudio]. The versions of the image are aligned with the
-versions of R/RStudio, not the GitHub tags of this repository.
+The artifact published by this repository are HTML notebooks published to GitHub
+Pages and the Docker image [sagebionetworks/rstudio]. The tags of these
+artifacts are aligned with the GitHub tags.
 
 The table below describes the image tags available.
 
