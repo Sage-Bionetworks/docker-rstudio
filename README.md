@@ -1,11 +1,9 @@
-# RStudio
+# Sage Bionetworks Docker image for RStudio
 
 [![GitHub Release](https://img.shields.io/github/release/Sage-Bionetworks/docker-rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio/releases)
 [![GitHub CI](https://img.shields.io/github/workflow/status/Sage-Bionetworks/docker-rstudio/CI.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio)
 [![GitHub License](https://img.shields.io/github/license/Sage-Bionetworks/docker-rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio/blob/main/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/sagebionetworks/rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/sagebionetworks/rstudio)
-
-Docker image for analyses using RStudio and Python-Conda
 
 ## Introduction
 
@@ -58,10 +56,10 @@ by the [CI/CD workflow of this repository](.github/workflows/ci.yml).
 
 Rmd Notebook | Description | HTML Notebook
 -------- | ----------- | -------------
-[notebook.Rmd](notebooks/examples/notebook.Rmd)         | Default RStudio notebook.                                | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/notebook.html)
-[r-and-python.Rmd](notebooks/examples/r-and-python.Rmd) | Shows how to use R and Python together.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/r-and-python.html)
-[sagethemes.Rmd](notebooks/examples/sagethemes.Rmd)     | Example notebook provided by the R library [sagethemes]. | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/sagethemes.html)
-[synapse.Rmd](notebooks/examples/synapse.Rmd)           | Shows how to interact with Synapse API.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/rstudio/latest/notebooks/synapse.html)
+[notebook.Rmd](notebooks/notebook.Rmd)         | Default RStudio notebook.                                | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/notebook.html)
+[r-and-python.Rmd](notebooks/r-and-python.Rmd) | Shows how to use R and Python together.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/r-and-python.html)
+[sagethemes.Rmd](notebooks/sagethemes.Rmd)     | Example notebook provided by the R library [sagethemes]. | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/sagethemes.html)
+[synapse.Rmd](notebooks/synapse.Rmd)           | Shows how to interact with Synapse API.                  | [![HTML notebook](https://img.shields.io/badge/latest-blue.svg?color=1283c3&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://sage-bionetworks.github.io/docker-rstudio/latest/notebooks/synapse.html)
 
 > Important: Please make sure when you write your own notebooks that no
 > sensitive information ends up being publicly available. Please check with the
@@ -70,14 +68,18 @@ Rmd Notebook | Description | HTML Notebook
 
 ## Usage
 
-1. Create and edit the configuration file. You can initially start RStudio using
+1. Clone this GitHub repository.
+2. Create and edit the configuration file. You can initially start RStudio using
    this configuration as-is.
 
        cp .env.example .env
 
-2. Start RStudio. Add the option `-d` or `--detach` to run in the background.
+3. Start RStudio. Add the option `-d` or `--detach` to run in the background.
 
        docker compose up
+
+> If the command `docker compose` is not available for your system, [install
+> docker-compose] and use the command `docker-compose`.
 
 RStudio is now available at http://localhost. On the login page, enter the
 default username (`rstudio`) and the password specified in `.env`.
@@ -214,9 +216,9 @@ HTML notebook that will be saved to the same directory with the extension
 ```console
 docker run --rm \
     --env-file .env \
-    -v $(pwd)/notebooks:/data \
+    -v $(pwd):/project \
     sagebionetworks/rstudio:4.1.0 \
-    render /data/examples/*.Rmd
+    render /project/notebooks/*.Rmd
 ```
 
 ## Versioning
@@ -227,23 +229,20 @@ This repository uses [semantic versioning] to track the releases of this
 project. This repository uses "non-moving" GitHub tags, that is, a tag will
 always point to the same git commit once it has been created.
 
-### Docker tags
+### Docker and GitHub Pages tags
 
-The artifact published by this repository is the Docker image
-[sagebionetworks/rstudio]. The versions of the image are aligned with the
-versions of R/RStudio, not the GitHub tags of this repository.
+The artifact published by this repository are HTML notebooks published to GitHub
+Pages and the Docker image [sagebionetworks/rstudio]. The tags of these
+artifacts are aligned with the GitHub tags.
 
 The table below describes the image tags available.
 
-| Tag name                        | Moving | Description
-|---------------------------------|--------|------------
-| `latest`                        | Yes    | Latest stable release.
-| `edge`                          | Yes    | Lastest commit made to the default branch.
-| `weekly`                        | Yes    | Weekly release from the default branch.
-| `<major>`                       | Yes    | Latest stable major release of R/RStudio.
-| `<major>.<minor>`               | Yes    | Latest stable minor release of R/RStudio.
-| `<major>.<minor>.<patch>`       | Yes    | Latest stable patch release of R/RStudio.
-| `<major>.<minor>.<patch>-<sha>` | No     | Same as above but with the reference to the git commit.
+| Tag name                        | Description                                            | Moving
+|---------------------------------|--------------------------------------------------------|-------
+| `latest`                        | Latest stable release.                                 | Yes
+| `edge`                          | Lastest commit made to the default branch.             | Yes
+| `edge-<sha>`                    | Same as above with the reference to the git commit.    | No
+| `<major>.<minor>.<patch>`       | Latest stable patch release `<major>.<minor>.<patch>`. | No
 
 You should avoid using a moving tag like `latest` when deploying containers in
 production, because this makes it hard to track which version of the image is
@@ -283,4 +282,4 @@ Thinking about contributing to this project? Get started by reading our
 [Sage-Bionetworks-Challenges/challenge-analysis]: https://github.com/Sage-Bionetworks-Challenges/challenge-analysis
 [Sage-Bionetworks/docker-rstudio]: https://github.com/Sage-Bionetworks/docker-rstudio
 [Docker Engine]: https://docs.docker.com/engine/install/
-[Docker Compose]: https://docs.docker.com/compose/install/
+[install docker-compose]: https://docs.docker.com/compose/install/
