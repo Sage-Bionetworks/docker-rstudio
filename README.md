@@ -1,3 +1,5 @@
+> Consider using the original project [tschaffter/rstudio], which comes with additional features and is more frequently updated.
+
 # RStudio
 
 [![GitHub Release](https://img.shields.io/github/release/Sage-Bionetworks/docker-rstudio.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/Sage-Bionetworks/docker-rstudio/releases)
@@ -284,3 +286,4 @@ Thinking about contributing to this project? Get started by reading our
 [Sage-Bionetworks/docker-rstudio]: https://github.com/Sage-Bionetworks/docker-rstudio
 [Docker Engine]: https://docs.docker.com/engine/install/
 [Docker Compose]: https://docs.docker.com/compose/install/
+[tschaffter/rstudio]: https://github.com/tschaffter/rstudio
